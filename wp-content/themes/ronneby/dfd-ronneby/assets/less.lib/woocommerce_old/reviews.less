@@ -1,0 +1,184 @@
+/* 
+    Created on : 10.01.2015, 14:28:08
+    Author     : DFD
+	Styles for : Woocommerce reviews
+*/
+/* Reviews */
+
+.woocommerce-page {
+	#reviews {
+		h3 {
+			margin: 0;
+		}
+		h2 {
+			small {
+				float: right;
+				color: #777;
+				font-size: @default-text-font-size;
+				line-height: 21px;
+				margin: 10px 0 0 0;
+				a {
+					text-decoration: none;
+					color: #777;
+				}
+			}
+		}
+		#comments {
+			padding-bottom: 0;
+			float: left;
+			width: 58.33333%;
+			padding-right: 10px;
+			.woocommerce-Reviews-title {
+				.box-name();
+				font-size: @box-name-font-size - 1;
+				text-transform: uppercase;
+				margin-bottom: 50px;
+			}
+			ol.commentlist {
+				margin: 0;
+				width: 100%;
+				background: 0;
+				list-style: none;
+				&:after {
+					content: "";
+					display: block;
+					clear: both;
+				}
+				&.notes {
+					li.note {
+						p.meta {
+							font-weight: bold;
+							margin-bottom: 0;
+						}
+						.comment-description p:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+				li {
+					padding: 0 0 45px;
+					margin: 0 0 20px;
+					position: relative;
+					background: 0;
+					border-bottom: 1px dotted @border-color;
+					.author {
+						font-size: @box-name-font-size - 1;
+						color: @title-color;
+					}
+					.comment-text {
+						time.subtitle {
+							font-size: @subtitles-font-size - 1;
+							margin-bottom: 0;
+						}
+						.star-rating {
+							.rel();
+							bottom: 2px;
+							margin-left: 25px;
+						}
+						.comment-description {
+							font-size: @subtitles-font-size + 1;
+							font-family: @subtitles-font-family;
+							font-style: @subtitles-font-style;
+							text-align: left;
+							margin-top: 15px;
+							color: @title-color;
+							p {
+								font-size: inherit;
+								font-family: inherit;
+								font-style: inherit;
+								margin-bottom: 0;
+								color: inherit;
+							}
+						}
+					}
+					&:last-child {
+						margin-bottom: 0;
+						padding-bottom: 0;
+						border-width: 0;
+					}
+				}
+				> li {
+					&:before {
+						content: "";
+					}
+				}
+			}
+			.add_review {
+				&:after {
+					content: "";
+					display: block;
+					clear: both;
+				}
+				a {
+					line-height: 41px;
+				}
+			}
+		}
+		#review_form_wrapper {
+			float: left;
+			width: 41.66667%;
+			padding-left: 10px;
+			#review_form {
+				#respond {
+					.comment-reply-title {
+						.box-name();
+						display: block;
+						font-size: @box-name-font-size - 1;
+						text-transform: uppercase;
+						padding: 0;
+						margin-bottom: 50px;
+					}
+					.comment-form {
+						position: relative;
+						overflow: hidden;
+						input[type="email"],
+						input[type="text"] {
+							padding-left: 0;
+							padding-right: 0;
+							border-top-width: 0;
+							border-left-width: 0;
+							border-right-width: 0;
+						}
+						#comment {
+							border-top-width: 0;
+							border-left-width: 0;
+							border-right-width: 0;
+							max-width: 100%;
+						}
+						.comment-form-rating {
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							min-height: @default-button-line-height;
+							padding-left: 215px;
+							p {
+								margin-bottom: 0;
+								a {
+									.abs();
+								}
+							}
+						}
+						.comment-form-comment {
+							#comment {
+								padding: 7px 0;
+								height: @input-height;
+							}
+						}
+						.form-submit {
+							float: left;
+							margin-bottom: 0;
+							margin-top: 35px;
+							#submit {
+								padding: 0 45px;
+								background: @third-site-dark-color;
+								color: @main-site-dark-color;
+								border-width: 0;
+							}
+						}
+						.wpgdprc-checkbox + .form-submit {margin-top: 0;}
+					}
+				}
+			}
+		}
+	}
+}

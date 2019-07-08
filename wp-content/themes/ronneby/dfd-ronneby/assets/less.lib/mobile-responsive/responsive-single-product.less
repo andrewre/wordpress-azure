@@ -1,0 +1,45 @@
+/* 
+    Created on : 09.01.2015, 14:37:57
+    Author     : DFD
+	Styles for : Woocommerce single product
+*/
+@media only screen and (min-width: @screen-medium) {
+	.single-product {
+		.dfd-single-product-media-wrap {
+			&.thumbs-left {
+				margin: 0 -10px;
+				.woocommerce-product-gallery__wrapper {
+					> .woocommerce-product-gallery__image {
+						float: right;
+						width: 80%;
+					}
+				}
+				.woocommerce-product-gallery__image {
+					
+				}
+				.dfd-single-product-thumbnails-wrap {
+					float: left;
+					width: 20%;
+					padding-right: 10px;
+					&:before,
+					&:after {
+						.hide();
+					}
+				}
+			}
+		}
+		&.woocommerce-page #reviews #review_form {
+			padding-left: 25px;
+		}
+	}
+}
+@media only screen and (max-width: @screen-medium - 1) {
+	.single-product {
+		.entry-summary {
+			.share-cover,
+			.product_meta {
+				padding-left: 35px;
+			}
+		}
+	}
+}

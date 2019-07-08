@@ -1,0 +1,77 @@
+/* 
+    Created on : 28.03.2015, 10:09:19
+    Author     : DFD
+	Styles for : Woo Modules
+*/
+@media only screen and (max-width : @screen-normal) {
+	.dfd-single-product-module {
+		
+	}
+	.dfd-woo-single-category {
+		img {
+			min-width: 100%;
+		}
+	}
+	.dfd-background-dark {
+		.dfd-single-product-module {
+			
+		}
+	}
+}
+
+@media (min-width: @screen-medium) and (max-width: @screen-normal + 1) {
+	.dfd-single-product-module.dfd-style-2 .dfd-product-top {
+		padding: 10px;
+	}
+}
+
+@media only screen and (max-width : @screen-medium - 1) {
+	.products.row .product {
+		margin-bottom: 20px !important;
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+	.dfd-single-product-module.dfd-style-2 .dfd-product-image img {
+		min-width: 100%;
+	}
+	.dfd-woo-single-category .dfd-heading div.box-name {
+		.transform(translateY(0));
+	}
+}
+@media only screen and (max-width : @screen-small - 1) {
+	.dfd-single-product-module {
+		
+	}
+}
+
+@media only screen and (max-width: @screen-medium - 1) {
+	.woo-product-grid-wrap {
+		.products {
+			.product {
+				width: 50%;
+				float: left;
+				padding: 0 10px;
+				&:last-child {
+					float: left !important;
+					clear: none !important;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.woo-product-grid-wrap {
+		.products {
+			.product {
+				width: 100%;
+				.woo-entry-thumb-carousel {
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

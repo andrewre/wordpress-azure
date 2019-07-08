@@ -1,0 +1,290 @@
+<wpml-config>
+	<custom-types>
+		<custom-type translate="1">my-product</custom-type>
+		<custom-type translate="1">gallery</custom-type>
+		<custom-type translate="1">dfd-author</custom-type>
+		<custom-type translate="1">layerslider</custom-type>
+		<custom-type translate="1">revslider</custom-type>
+	</custom-types>
+	
+	<taxonomies>
+		<taxonomy translate="1">my-product_category</taxonomy>
+		<taxonomy translate="1">my-product_tags</taxonomy>
+		<taxonomy translate="1">gallery_category</taxonomy>
+	</taxonomies>
+	
+	<admin-texts>
+		<key name="ronneby">
+			<key name="top_adress_field"/>
+			<key name="side_area_copyright"/>
+			<key name="copyright_footer"/>
+			<key name="shop_title"/>
+			<key name="folio_top_page_title"/>
+			<key name="portfolio_url_slug"/>
+			<key name="portfolio_inner_description_title"/>
+			<key name="blog_top_page_select"/>
+			<key name="blog_top_page_url"/>
+			<key name="folio_top_page_url"/>
+			<key name="dfd_gallery_top_page_url"/>
+		</key>
+	</admin-texts>
+	<shortcodes>
+		<shortcode>
+			<tag>announcement</tag>
+			<attributes>
+				<attribute>content</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>info_banner</tag>
+			<attributes>
+				<attribute>title</attribute>
+				<attribute>subtitle</attribute>
+				<attribute>content</attribute>
+				<attribute type="link" encoding="vc_link">link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_info_box</tag>
+			<attributes>
+				<attribute>readmore_text</attribute>
+				<attribute>title</attribute>
+				<attribute>subtitle</attribute>
+				<attribute>content</attribute>
+				<attribute type="link" encoding="vc_link">link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>facts</tag>
+			<attributes>
+				<attribute>title</attribute>
+				<attribute>subtitle</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>piecharts</tag>
+			<attributes>
+				<attribute>title</attribute>
+				<attribute>subtitle</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>pricing_Label</tag>
+			<attributes>
+				<attribute>label</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>pricing_block</tag>
+			<attributes>
+				<attribute>title</attribute>
+				<attribute>subtitle</attribute>
+				<attribute>currency_symbol</attribute>
+				<attribute>time_interval</attribute>
+				<attribute>description</attribute>
+				<attribute>label</attribute>
+				<attribute>button_text</attribute>
+				<attribute type="link" encoding="vc_link">button_link</attribute>
+				<attribute>feat_mark_text</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>progressbar</tag>
+			<attributes>
+				<attribute>title</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_service_item_2</tag>
+			<attributes>
+				<attribute>title</attribute>
+				<attribute>subtitle</attribute>
+				<attribute>content</attribute>
+				<attribute type="link" encoding="vc_link">dfd_service_link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>new_team_member</tag>
+			<attributes>
+				<attribute>team_member_name</attribute>
+				<attribute>team_member_job_position</attribute>
+				<attribute>team_member_description</attribute>
+				<attribute type="link" encoding="vc_link">custtom_link_url</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>testimonials_slider</tag>
+			<attributes>
+				<attribute>title</attribute>
+				<attribute>subtitle</attribute>
+				<attribute>testimonial_text</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>new_testimonials</tag>
+			<attributes>
+				<attribute>author</attribute>
+				<attribute>subtitle</attribute>
+				<attribute>description</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>videoplayer</tag>
+			<attributes>
+				<attribute>title</attribute>
+				<attribute>subtitle</attribute>
+				<attribute>video_link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_client_logo</tag>
+			<attributes>
+				<attribute>block_title</attribute>
+				<attribute>block_subtitle</attribute>
+				<attribute>block_content</attribute>
+				<attribute type="link" encoding="vc_link">link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_contact_block_horizontal</tag>
+			<attributes>
+				<attribute>fild_address</attribute>
+				<attribute>fild_phone</attribute>
+				<attribute>fild_email</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_contact_block</tag>
+			<attributes>
+				<attribute>fild_address</attribute>
+				<attribute>fild_phone</attribute>
+				<attribute>fild_email</attribute>
+				<attribute>fild_website</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_delimiter</tag>
+			<attributes>
+				<attribute>text_delimiter</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_icon_list_item</tag>
+			<attributes>
+				<attribute>content</attribute>
+				<attribute type="link" encoding="vc_link">link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_logo_carousel</tag>
+			<attributes>
+				<attribute>description</attribute>
+				<attribute type="link" encoding="vc_link">link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_milestone</tag>
+			<attributes>
+				<attribute>icon_text</attribute>
+				<attribute>block_title</attribute>
+				<attribute>block_subtitle</attribute>
+				<attribute>block_content</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_new_subscribe</tag>
+			<attributes>
+				<attribute>subscribe_module_placeholder</attribute>
+				<attribute>button_text</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_button</tag>
+			<attributes>
+				<attribute>button_text</attribute>
+				<attribute>tooltip_text</attribute>
+				<attribute type="link" encoding="vc_link">buttom_link_src</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>button_gradient</tag>
+			<attributes>
+				<attribute>button_text</attribute>
+				<attribute>tooltip_text</attribute>
+				<attribute type="link" encoding="vc_link">buttom_link_src</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_animated_text</tag>
+			<attributes>
+				<attribute>prefix</attribute>
+				<attribute>text_field</attribute>
+				<attribute>postfix</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_google_map</tag>
+			<attributes>
+				<attribute>map_markers</attribute>
+				<attribute>content</attribute>
+				<attribute>infobox_heading</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_heading</tag>
+			<attributes>
+				<attribute>content</attribute>
+				<attribute>subtitle</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_hotspot</tag>
+			<attributes>
+				<attribute>hotspot_data</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_single_image</tag>
+			<attributes>
+				<attribute>external_link_url</attribute>
+				<attribute>image_ext_link_url</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_modal_box</tag>
+			<attributes>
+				<attribute>button_text</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_new_social_accounts</tag>
+			<attributes>
+				<attribute type="link" encoding="vc_link">buttom_link_src</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>price_list</tag>
+			<attributes>
+				<attribute>title</attribute>
+				<attribute>price</attribute>
+				<attribute>subtitle</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>rotate_box</tag>
+			<attributes>
+				<attribute>title_first</attribute>
+				<attribute>subtitle_first</attribute>
+				<attribute>desc_reverse</attribute>
+				<attribute>number_text</attribute>
+				<attribute type="link" encoding="vc_link">link</attribute>
+			</attributes>
+		</shortcode>
+		<shortcode>
+			<tag>dfd_user_form</tag>
+			<attributes>
+				<attribute>btn_message</attribute>
+			</attributes>
+		</shortcode>
+	</shortcodes>
+</wpml-config>

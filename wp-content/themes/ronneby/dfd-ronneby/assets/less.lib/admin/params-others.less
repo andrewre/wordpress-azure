@@ -1,0 +1,71 @@
+/* 
+    Created on : 24.10.2016, 10:57:04
+    Author     : DFD
+	Styles for : Typography param container
+*/
+
+.radio-image-param,
+.radio-post-select-param {
+	&.dfd-radio-image-box {
+		label {
+			> input{
+				display: none;
+				&:checked + .pattern-background:before {
+					opacity: 1;
+					visibility: visible;
+				}
+				+ img{
+					cursor: pointer;
+					border: 2px solid #ddd;
+				}
+			}
+		}
+		.pattern-background {
+			.rel();
+			border: 2px solid #ddd;
+			border-radius: 4px;
+			&:before {
+				content: "";
+				.block();
+				width: 30px;
+				height: 30px;
+				.abs();
+				bottom: -4px;
+				left: -6px;
+				background-color: #4ecc48;
+				background-image: url(../img/menu-icons.png);
+				background-size: 100% auto;
+				background-position: 0 -1236px;
+				.rounded(50%);
+				.box-shadow(0 5px 15px 0 fade(#4ecc48, 60%));
+				z-index: 2;
+				opacity: 0;
+				visibility: hidden;
+				.transition(~"opacity .3s ease, visibility .3s ease");
+			}
+		}
+	}
+}
+.vc_wrapper-param-type-param_group {
+	.vc_empty-container {
+		outline: none;
+		border: 1px dashed rgba(125,125,125,.4);
+		opacity: 1;
+		.transition(border-color .3s ease);
+		&:after {
+			color: #ffffff;
+			background: @redux-light-blue-color;
+			font-size: 12px;
+			.rounded(50%);
+			.box-shadow(0 8px 35px 0 fade(@redux-blue-color, 60%) !important);
+			.transition(background .3s ease);
+		}
+		&:hover {
+			opacity: 1;
+			border-color: rgba(125,125,125,.2);
+			&:after {
+				background: @redux-blue-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,578 @@
+/* 
+    Created on : 23.11.2017, 12:41:40
+    Author     : DFD
+	Styles for : Radium demo importer Redux extension
+*/
+.dfd-demo-import-section {
+	#dfd-import-description {
+		.rel();
+		padding-left: 45px;
+		color: #6e6e6e;
+		.redux-hint-qtip {
+			.abs();
+			top: 30px;
+			left: 0;
+			> i {
+				&:before {
+					content: "!";
+				}
+			}
+			&:not(:hover) {
+				background: #ffffff;
+			}
+		}
+	}
+	.dfd-after-import-success {
+		text-align: center;
+		margin-bottom: -15px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid @redux-border-color;
+		h2 {
+			font-family: "Roboto";
+			font-size: 18px;
+			font-weight: 500;
+			font-style: normal;
+			display: inline-block;
+			margin-top: 10px;
+			margin-bottom: 30px;
+			padding-left: 35px;
+			color: #17110f;
+			background-image: url(../img/import-icons.png);
+			background-repeat: no-repeat;
+			background-size: 34px auto;
+			background-position: 0px -135px;
+			span {
+				text-transform: capitalize;
+			}
+		}
+		.dfd-import-button-wrapper {
+			.button {
+				font-family: "Roboto";
+				font-size: 12px;
+				font-weight: 700;
+				text-transform: uppercase;
+				height: @redux-admin-input;
+				line-height: @redux-admin-input;
+				padding: 0 30px 0 55px;
+				color: #17110f;
+				background-color: transparent;
+				border: 1px solid #d5d9e1;
+				.rounded(4px);
+				text-shadow: none;
+				.box-shadow(none);
+				.transition(~"background-color .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease");
+				&:not(.button-primary) {
+					&:hover {
+						background-color: @redux-border-color;
+						border-color: @redux-border-color;
+					}
+				}
+				&.button-primary {
+					height: @redux-admin-input;
+					line-height: @redux-admin-input;
+					color: #ffffff;
+					background-color: @redux-blue-color;
+					background-image: url(../img/import-icons.png);
+					background-repeat: no-repeat;
+					background-size: 31px auto;
+					background-position: 15px 6px;
+					border: none;
+					.box-shadow(0 8px 35px 0 fade(#2f78ff, 60%));
+					&:hover {
+						background-color: #095aee;
+						.box-shadow(0 8px 35px 0 #2f78ff);
+					}
+				}
+			}
+			&.dfd-import-additional-buttons {
+				.clearfix();
+				margin: 0 -15px;
+				.button-cover {
+					float: left;
+					width: 33.3333%;
+					padding: 0 15px;
+					&:nth-child(1) {
+						.button {
+							background-image: url(../img/import-icons.png);
+							background-repeat: no-repeat;
+							background-size: 31px auto;
+							background-position: 15px -22px;
+						}
+					}
+					&:nth-child(2) {
+						.button {
+							background-image: url(../img/import-icons.png);
+							background-repeat: no-repeat;
+							background-size: 31px auto;
+							background-position: 15px -53px;
+						}
+					}
+					&:nth-child(3) {
+						.button {
+							background-image: url(../img/import-icons.png);
+							background-repeat: no-repeat;
+							background-size: 31px auto;
+							background-position: 15px -84px;
+						}
+					}
+					a {
+						display: block;
+						margin: 0;
+					}
+				}
+			}
+		}
+		.dfd-import-delimiter {
+			font-family: "Roboto";
+			font-size: 12px;
+			font-weight: 500;
+			font-style: normal;
+			text-transform: uppercase;
+			padding-top: 20px;
+			padding-bottom: 15px;
+			color: #9da4b1;
+		}
+	}
+	.theme-browser {
+		padding-top: 45px;
+		.themes {
+			.clearfix();
+			margin: -30px -8px;
+			.no-demo-data-available {
+				padding-bottom: 50px;
+				.description {
+					font-size: 16px;
+					line-height: 2;
+					a {
+						color: @redux-blue-color;
+						&:hover {
+							color: darken(@redux-blue-color, 4%);
+						}
+					}
+				}
+			}
+			.wrap-importer{
+				float: left;
+				width: 33.3333%;
+				margin: 0;
+				padding: 30px 8px;
+				border: none;
+				outline: none;
+				.box-shadow(none);
+				&.theme {
+					cursor: default;
+				}
+				&.not-imported {
+					cursor: pointer;
+				}
+				.dfd-import-wrap-cover {
+					.theme-screenshot {
+						.rel();
+						overflow: visible;
+						.image-inner {
+							.rel();
+							overflow: hidden;
+							background-size: 100% auto;
+							background-position: center top;
+							.rounded(5px);
+							.box-shadow(0 5px 20px 0 rgba(29, 36, 44, .07));
+							.transition(box-shadow .5s ease);
+							&:after {
+								content: "";
+								.block();
+								padding-top: 100%;
+							}
+						}
+						.dfd-imported-badge {
+							content: "";
+							.block();
+							width: 30px;
+							height: 30px;
+							.abs();
+							bottom: -8px;
+							left: -6px;
+							background-color: #4ecc48;
+							background-image: url(../img/menu-icons.png);
+							background-size: 100% auto;
+							background-position: 0 -1236px;
+							outline: none;
+							border: none;
+							.rounded(50%);
+							.box-shadow(0 5px 15px 0 fade(#4ecc48, 60%));
+							z-index: 2;
+							.transition(~"opacity .3s ease, visibility .3s ease");
+						}
+						&:after {
+							.hide();
+						}
+					}
+					.more-details {
+
+					}
+					.theme-actions {
+						position: relative;
+						top: 0;
+						margin: 30px 0 0;
+						padding: 0;
+						background: transparent;
+						outline: none;
+						border: none;
+						.box-shadow(none);
+						opacity: 1;
+						.box-shadow(none);
+						.transform(none);
+						.clearfix();
+						.importer-button {
+							font-family: "Roboto";
+							font-size: 12px;
+							font-weight: 700;
+							text-transform: uppercase;
+							.block();
+							overflow: hidden;
+							max-width: 45px;
+							height: @redux-admin-input;
+							line-height: @redux-admin-input;
+							margin: 0;
+							padding: 0 0 0 45px;
+							color: #ffffff;
+							background-color: @redux-blue-color;
+							background-image: url(../img/menu-icons.png);
+							background-repeat: no-repeat;
+							background-size: 31px auto;
+							background-position: 8px -897px;
+							border: none;
+							.rounded(4px);
+							outline: none;
+							.box-shadow(0 8px 35px 0 fade(@redux-blue-color, 60%));
+							.transition(~"max-width .5s ease, padding .5s ease, background-color .3s ease, box-shadow .3s ease");
+							&:hover {
+								background-color: #095aee;
+								.box-shadow(0 8px 35px 0 #2f78ff);
+							}
+						}
+						.dfd-import-see-demo {
+							.block();
+							float: left;
+							width: @redux-admin-input;
+							height: @redux-admin-input;
+							line-height: @redux-admin-input;
+							background-color: transparent;
+							background-image: url(../img/menu-icons.png);
+							background-size: 100% auto;
+							background-position: 0px -1965px;
+							border: 1px solid @redux-border-color;
+							.rounded(4px);
+							.transition(~"background-color .3s ease, border .3s ease");
+							&:hover {
+								background-color: #e1e4e8;
+								border-color: #e1e4e8;
+							}
+						}
+						.wbc-importer-buttons {
+							float: left;
+							margin-right: 14px;
+							&.importer-button {
+							}
+						}
+						.spinner {
+							display: none !important;
+						}
+					}
+					.theme-name {
+						font-family: "Roboto";
+						font-size: 14px;
+						font-weight: 500;
+						font-style: normal;
+						text-align: left;
+						line-height: 1.6;
+						margin: 25px 0 0;
+						padding: 0;
+						color: #17110f;
+						background: transparent;
+						border: none;
+						outline: none;
+						.box-shadow(none);
+					}
+					&:hover {
+						.theme-screenshot {
+							.image-inner {
+								.box-shadow(0 8px 30px 0 rgba(29, 36, 44, .2));
+							}
+						}
+						.theme-actions {
+							.importer-button {
+								max-width: 180px;
+								padding: 0 30px 0 55px;
+								&.wbc-importer-reimport {
+									padding: 0 25px 0 50px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+#dfd-import-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	.block();
+	width: 100%;
+	height: 100%;
+	background: rgba(23, 17, 15, .8);
+	z-index: 99999;
+	.box-sizing(border-box);
+	opacity: 0;
+	visibility: hidden;
+	.transition(~"opacity .3s ease, visibility .3s ease");
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+	*,
+	*:before,
+	*:after {
+		.box-sizing(border-box);
+	}
+	.dfd-hide-importer-popup {
+		.abs();
+		top: 0;
+		left: 0;
+		.block();
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	.dfd-import-popup-content {
+		.abs();
+		top: 50%;
+		left: 50%;
+		.block();
+		width: 310px;
+		padding: 30px;
+		background: #ffffff;
+		z-index: 2;
+		.transform(translate3d(-50%, -50%, 0));
+		.inner {
+			&.import-started {
+				h3 {
+					padding-top: 0;
+				}
+				.content {
+					padding-bottom: 10px;
+					.description {
+						font-family: "Roboto";
+						font-size: 14px;
+						font-weight: 400;
+						line-height: 1;
+						margin-top: 30px;
+						color: #303134;
+						.clearfix();
+						.done-label {
+							font-weight: 500;
+							float: right;
+							color: #4ecc48;
+							.hide();
+						}
+						.progress {
+							.rel();
+							.block();
+							width: 100%;
+							height: 10px;
+							margin: 18px 0 0;
+							background: #f1f3f5;
+							.rounded(5px);
+							> span {
+								.block();
+								width: 10px;
+								height: 100%;
+								.abs();
+								top: 0;
+								left: 0;
+								background: #1064ff;
+								.rounded(inherit);
+								.transition(width .3s ease);
+							}
+						}
+					}
+				}
+			}
+		}
+		.dfd-import-popup-image {
+			.rel();
+			overflow: hidden;
+			background-size: 100% auto;
+			background-position: center top;
+			.rounded(5px);
+			.box-shadow(0 5px 20px 0 rgba(29, 36, 44, .07));
+			&:after {
+				content: "";
+				.block();
+				padding-top: 100%;
+			}
+		}
+		h3 {
+			font-family: "Roboto";
+			font-size: 14px;
+			font-weight: 500;
+			font-style: normal;
+			line-height: 1.6;
+			margin: 0;
+			padding-top: 35px;
+			padding-bottom: 20px;
+			color: #17110f;
+			border-bottom: 1px solid @redux-border-color;
+			span {
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 1.43;
+				.block();
+				margin-top: 15px;
+				padding-right: 25%;
+				color: #7f838b;
+			}
+		}
+		.dfd-importer-plugins {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				li {
+					font-family: "Roboto";
+					font-size: 14px;
+					font-weight: 400;
+					font-style: normal;
+					line-height: 1.6;
+					color: #303134;
+					.clearfix();
+					&:not(:last-child) {
+						margin-bottom: 20px;
+					}
+					span {
+						font-weight: 500;
+						float: right;
+						color: #4ecc48;
+						&.inactive {
+							color: #9ba1ad;
+						}
+					}
+				}
+			}
+		}
+		.dfd-importer-checkbox {
+			.clearfix();
+			padding-top: 20px;
+			margin-bottom: 25px;
+			border-top: 1px solid @redux-border-color;
+			input[type="checkbox"] {
+				float: left;
+				.rel();
+				width: 20px;
+				height: 20px;
+				margin-top: 2px;
+				margin-right: 5px;
+				border-width: 2px;
+				border-color: fade(@redux-blue-color, 50%);
+				.box-shadow(none);
+				.box-sizing(content-box);
+				.transition(border-color .3s ease);
+				&:before {
+					content: "";
+					.abs();
+					top: 0;
+					left: 0;
+					.block();
+					width: 110%;
+					height: 100%;
+					margin: 0;
+					background-image: url(../img/menu-icons.png);
+					background-size: 140% auto;
+					background-position: -5px -2648px;
+					opacity: 0;
+					.transition(opacity .3s ease);
+				}
+				&:checked {
+					border-color: @redux-blue-color;
+					&:before {
+						opacity: 1;
+					}
+				}
+				input[type="checkbox"] {
+					border-color: #9abeff;
+				}
+			}
+			span {
+				font-family: "Roboto";
+				font-size: 14px;
+				font-weight: 400;
+				font-style: normal;
+				line-height: 1.93;
+				.block();
+				margin-left: 35px;
+				color: #303134;
+			}
+		}
+		.dfd-importer-buttons {
+			.dfd-run-importer {
+				font-family: "Roboto";
+				font-size: 12px;
+				font-weight: 700;
+				text-decoration: none;
+				text-transform: uppercase;
+				.block();
+				float: left;
+				overflow: hidden;
+				height: @redux-admin-input;
+				line-height: @redux-admin-input;
+				margin: 0 15px 0 0;
+				padding: 0 30px 0 55px;
+				color: #ffffff;
+				background-color: @redux-blue-color;
+				background-image: url(../img/menu-icons.png);
+				background-repeat: no-repeat;
+				background-size: 31px auto;
+				background-position: 8px -897px;
+				border: none;
+				.rounded(4px);
+				outline: none;
+				.box-shadow(0 8px 35px 0 fade(@redux-blue-color, 60%));
+				opacity: .5;
+				.transition(~"background-color .3s ease, box-shadow .3s ease, opacity .3s ease");
+				&:not(.active) {
+					cursor: no-drop;
+				}
+				&.active {
+					opacity: 1;
+				}
+				&:hover {
+					background-color: #095aee;
+					.box-shadow(0 8px 35px 0 #2f78ff);
+				}
+			}
+			.dfd-see-demo {
+				.block();
+				float: left;
+				width: @redux-admin-input;
+				height: @redux-admin-input;
+				line-height: @redux-admin-input;
+				background-color: transparent;
+				background-image: url(../img/menu-icons.png);
+				background-size: 100% auto;
+				background-position: 0px -1965px;
+				border: 1px solid @redux-border-color;
+				.rounded(4px);
+				outline: none;
+				.box-shadow(none);
+				.transition(~"background-color .3s ease, border .3s ease");
+				&:hover {
+					background-color: #e1e4e8;
+					border-color: #e1e4e8;
+				}
+			}
+		}
+	}
+}

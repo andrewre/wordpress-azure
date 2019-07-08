@@ -1,0 +1,297 @@
+/* 
+    Created on : 23.06.2018, 13:54:50
+    Author     : DFD
+	Styles for : Visual Composer popup window
+*/
+.vc_ui-panel-window-inner {
+	overflow: hidden;
+	.rounded(5px);
+	.vc_ui-panel-header-container {
+		padding-top: 30px;
+		padding-left: 35px;
+		background: #f1f3f5;
+		.vc_ui-panel-header .vc_ui-panel-header-heading {
+			font-family: "Roboto";
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 20px;
+			color: #1c1c1c;
+		}
+		.vc_ui-panel-header-controls {
+			color: #202020;
+		}
+		.vc_ui-panel-header-content {
+			.vc_general {
+				.vc_edit-form-tab-control {
+					border-top: 1px solid #e1e4e8;
+					border-bottom: 2px solid transparent;
+					.transition(~"background .3s ease, border-color .3s ease");
+					&:first-child {
+						border-left: 1px solid #e1e4e8;
+					}
+					&:not(:last-child) {
+						border-right: 1px solid #e1e4e8;
+					}
+					&.vc_active {
+						background: #ffffff;
+					}
+					&:hover:not(.vc_active) {
+						border-bottom-color: #2581ff;
+					}
+					.vc_ui-tabs-line-trigger {
+						font-family: "Roboto";
+						font-size: 14px;
+						font-weight: 400;
+						color: #1f1f1f;
+						background: transparent;
+						.transition(~"background .3s ease, border-color .3s ease");
+					}
+				}
+				.vc_ui-tabs-line-dropdown-toggle {
+					color: #1b1b1b;
+					.vc_ui-tabs-line-dropdown {
+						.vc_edit-form-tab-control {
+							border: none;
+							.rounded(0);
+							.vc_ui-tabs-line-trigger {
+								color: #1b1b1b;
+							}
+							&:hover {
+								.vc_ui-tabs-line-trigger {
+									color: #ffffff;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.vc_ui-panel-content-container {
+		padding-left: 20px;
+		padding-right: 20px;
+		.vc_panel-tabs {
+			margin-bottom: 15px;
+		}
+		&::-webkit-scrollbar {
+			width: 6px;
+			margin-right: 20px;
+		}
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+			border: none;
+		}
+		&::-webkit-scrollbar-thumb {
+			height: 40px;
+			background-color: #44484f;
+			border-radius: 6px;
+		}
+		&::-webkit-scrollbar-thumb:hover {
+			background-color: darken(#44484f, 5%);
+		}
+		.wp-picker-container {
+			display: inline-block;
+			* {
+				.box-sizing(content-box);
+			}
+			.wp-picker-input-wrap {
+				label {
+					margin-left: -51px !important;
+					input[type="text"].wp-color-picker {
+						border-radius: 27px;
+						padding-left: 60px;
+						padding-right: 23px;
+						max-width: 72px;
+						height: 42px;
+						line-height: 41px;
+						width: 72px!important;
+						background: #f1f3f5;
+						text-align: center;
+						.box-shadow(none);
+						.transition(border-color .3s ease);
+						&:hover {
+							border-color: #9abeff;
+						}
+					}
+				}
+			}
+			.color-alpha {
+				width: 45px;
+				height: 45px;
+				min-width: 45px;
+				min-height: 45px;
+				margin-top: 2px;
+				margin-left: 2px;
+				.rounded(45px);
+			}
+			.wp-color-result {
+				height: 49px;
+				min-height: 49px;
+				padding-left: 49px;
+				margin: 0;
+				z-index: 1;
+				&:before {
+					width: 43px;
+					height: 43px;
+					.box-sizing(content-box);
+				}
+			}
+			.wp-picker-holder {
+				width: 0;
+				.box-sizing(content-box);
+				* {
+					.box-sizing(content-box);
+				}
+				.iris-picker {
+					float: left;
+				}
+			}
+		}
+		.vc_css-editor {
+			.wp-picker-container {
+				.wp-picker-input-wrap {
+					label {
+						margin-top: 0;
+					}
+				}
+			}
+			.vc_layout-onion {
+				input[type=text] {
+					.box-shadow(none);
+					&:hover,
+					&:focus {
+						border-color: #9abeff;
+					}
+				}
+			}
+		}
+		input[type="checkbox"] {
+			@s: 18px;
+			position: relative;
+			background: transparent;
+			border-width: 0;
+			.box-shadow(none);
+			margin: 0 10px 0 0;
+			cursor: pointer;
+			width: @s;
+			height: @s;
+			overflow: hidden;
+			&:before {
+				content: "";
+				display: block;
+				width: @s;
+				height: @s;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-top: -@s/2;
+				margin-left: -@s/2;
+				background: @cmb-white;
+				border: 1px solid @cmb-border-color;
+				.transition(~"background .3s ease, border-color .3s ease");
+				.box-sizing(border-box);
+			}
+			&:after {
+				content: "\eae0";
+				font-family: "icomoon";
+				font-size: 40px;
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -2px;
+				color: @cmb-white;
+				.transform(translate(-50%, -50%) scale(0));
+				.transition-transform(.3s ease);
+			}
+			&:hover {
+				&:before {
+					border-color: @redux-blue-color;
+				}
+			}
+			&:checked {
+				&:before {
+					background: @redux-blue-color;
+					border-color: @redux-blue-color;
+				}
+				&:after {
+					.transform(translate(-50%, -50%) scale(1));
+				}
+			}
+		}
+		.vc_wrapper-param-type-dfd_switch {
+			input[type="checkbox"] {
+				display: none;
+			}
+		}
+	}
+	.vc_ui-panel-footer-container {
+		padding: 30px 35px;
+		background: #ffffff;
+		border-top: 1px solid @redux-border-color;
+		.vc_ui-panel-footer {
+			.vc_ui-button-group {
+				.clearfix();
+				display: inline-block;
+				.vc_general.vc_ui-button {
+					.rel();
+					float: right;
+					font-family: "Roboto";
+					font-size: 12px;
+					font-weight: 700;
+					text-transform: uppercase;
+					min-width: 0;
+					height: @redux-admin-input;
+					line-height: @redux-admin-input;
+					padding: 0 30px;
+					margin: 0;
+					color: #17110f;
+					background: transparent;
+					border: 1px solid #d5d9e1;
+					.rounded(4px);
+					text-shadow: none;
+					.box-shadow(none);
+					.transition(~"background .3s ease, color .3s ease, border-color .3s ease, box-shadow .3s ease");
+					&.vc_ui-button-default {
+						margin-left: 15px;
+						&:hover {
+							background: @redux-border-color;
+							border-color: @redux-border-color;
+						}
+					}
+					&.vc_ui-button-action {
+						height: @redux-admin-input;
+						line-height: @redux-admin-input;
+						padding-left: 50px;
+						color: #ffffff;
+						background-color: @redux-blue-color;
+						border: none;
+						.box-shadow(0 8px 35px 0 fade(#2f78ff, 60%));
+						&:before {
+							content: "\ec42";
+							font-family: "icomoon";
+							font-size: 18px;
+							font-weight: normal;
+							.abs();
+							top: 50%;
+							left: 15px;
+							.block();
+							height: 1em;
+							line-height: 1;
+							margin-top: -.5em;
+							color: #7eabff;
+							.transition(color .3s ease);
+						}
+						&:hover {
+							background-color: #095aee;
+							.box-shadow(0 8px 35px 0 #2f78ff);
+							&:before {
+								color: #ffffff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

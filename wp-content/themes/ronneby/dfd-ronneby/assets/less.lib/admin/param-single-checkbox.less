@@ -1,0 +1,71 @@
+/* 
+    Created on : 27.10.2016, 8:28:41
+    Author     : DFD
+	Styles for : VC param single checkbox
+*/
+.dfd_single_checkbox_wrap {
+	margin-bottom: 15px;
+	.dfd_single_checkbox {
+		@s: 43px;
+		.inline-block();
+		height: @s;
+		position: relative;
+		.button-animation {
+			.block();
+			.clearfix();
+			border: 1px solid @redux-border-color;
+			.rounded(4px);
+			> span {
+				font-family: "Roboto";
+				font-size: 12px;
+				font-weight: 500;
+				text-transform: uppercase;
+				.rel();
+				float: left;
+				.block();
+				line-height: @s;
+				padding: 0 20px;
+				color: #17110f;
+				.rounded(4px);
+				.transition(~"color .3s ease, background .3s ease, box-shadow .3s ease");
+			}
+			&:not(.right-active) {
+				> span {
+					&.dfd-button-on {
+						height: @s + 2;
+						margin: -1px;
+						color: #ffffff;
+						background: #4ecc48;
+						.box-shadow(0 8px 20px 0 rgba(62,213,55,0.65));
+						z-index: 2;
+					}
+					&.dfd-button-off {
+						&:hover {
+							background: #f1f3f5;
+						}
+					}
+				}
+			}
+			&.right-active {
+				> span {
+					&.dfd-button-on {
+						&:hover {
+							background: #f1f3f5;
+						}
+					}
+					&.dfd-button-off {
+						height: @s + 2;
+						margin: -1px;
+						color: #ffffff;
+						background: #b4bbc1;
+						.box-shadow(0 8px 20px 0 rgba(193,199,205,0.65));
+						z-index: 2;
+					}
+				}
+			}
+		}
+	}
+	label.param-title {
+		margin-left: 5px;
+	}
+}
